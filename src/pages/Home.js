@@ -9,7 +9,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import styles from '../assets/styles/Home';
 import CommonStyles from '../assets/styles/Common';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export default class Home extends Component {
   constructor(props) {
@@ -25,16 +25,23 @@ export default class Home extends Component {
       colors={['#1B5E20', '#4CAF50', '#C8E6C9']}
       style={styles.container}
       >
-      <TouchableOpacity>
-        <Icon name="lock" size={30} color="#4ac6f7" />
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text>scan id card</Text>
-      </TouchableOpacity>
-      <TouchableOpacity>
-        <Text>Scan IMEI</Text>
-      </TouchableOpacity>
-
+        <View>
+          <View style={styles.intro}>
+            <Text style={CommonStyles.fontSize}>Welcome to Barter Managment</Text>
+          </View>
+          <TouchableOpacity style={styles.homeItems}>
+            <MaterialIcons name="list" size={40} color="#E8F5E9" />
+            <Text style={CommonStyles.fontSize}>List</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.homeItems}>
+            <MaterialIcons name="credit-card" size={40} color="#E8F5E9" />
+            <Text style={CommonStyles.fontSize}>Scan id card</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.homeItems}>
+            <MaterialIcons name="phone-android" size={40} color="#E8F5E9" />
+            <Text style={CommonStyles.fontSize}>Scan IMEI</Text>
+          </TouchableOpacity>
+        </View>
       </LinearGradient>
     );
   }
