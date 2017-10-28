@@ -9,7 +9,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import styles from '../assets/styles/Home';
 import CommonStyles from '../assets/styles/Common';
-
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class Home extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ export default class Home extends Component {
       style={styles.container}
       >
       <TouchableOpacity>
-        <Text>liST</Text>
+        <Icon name="lock" size={30} color="#4ac6f7" />
       </TouchableOpacity>
       <TouchableOpacity>
         <Text>scan id card</Text>
